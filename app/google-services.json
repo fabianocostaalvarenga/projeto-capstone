@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "361995165326",
+    "firebase_url": "",
+    "project_id": "agenda-escolar-2018-870f6",
+    "storage_bucket": "agenda-escolar-2018-870f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361995165326:android:a8cc290dea326119",
+        "android_client_info": {
+          "package_name": "com.fca.agenda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361995165326-90r7nedbha13hddmrvm26qkpmasv00ms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fca.agenda",
+            "certificate_hash": "5ea9bd8b61f1817636414cecc6e4643edd4207d3"
+          }
+        },
+        {
+          "client_id": "361995165326-78hf92ffm8dqa06d908aajsgendr4h4s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFkukZBnOgnxvSdPqGE-YD3qFwWcd_Y2k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361995165326-78hf92ffm8dqa06d908aajsgendr4h4s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
