@@ -92,6 +92,14 @@ public class MainActivity extends AppCompatActivityHelper
     }
 
     @Override
+    protected void onStart() {
+        if(null != mainResponseDTO) {
+            updateRecycleView(mainResponseDTO.getListCommunication());
+        }
+        super.onStart();
+    }
+
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelable(ApplicationConstants.MAIN_RESPONSE, this.mainResponseDTO);
