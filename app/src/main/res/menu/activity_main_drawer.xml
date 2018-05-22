@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_perm_identity"
+            android:title="@string/drawer_item_login" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_general_orientation"
+            android:icon="@drawable/ic_description"
+            android:title="@string/drawer_item_general_information" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_event_note"
+            android:title="@string/drawer_item_calendar" />
+        <item
+            android:id="@+id/nav_scheduler"
+            android:icon="@drawable/ic_schedule"
+            android:title="@string/drawer_item_time" />
+    </group>
+
+    <item android:title="Úteis">
+        <menu>
+            <item
+                android:id="@+id/nav_personal_Data"
+                android:icon="@drawable/ic_school"
+                android:title="@string/drawer_item_personal_data" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info"
+                android:title="@string/drawer_item_about" />
+        </menu>
+    </item>
+
+</menu>

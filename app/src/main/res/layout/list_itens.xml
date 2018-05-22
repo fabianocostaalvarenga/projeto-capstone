@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/widget_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackgroundCardView">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/textTitleCommunications"
+        android:layout_marginLeft="@dimen/layout_margin_text_card"
+        android:layout_marginRight="@dimen/layout_margin_text_card"
+        android:textStyle="bold"
+        android:layout_toStartOf="@+id/ic_check"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:maxLines="1"
+        android:textColor="@color/colorTextDescriptionCommunications"
+        android:layout_marginLeft="@dimen/layout_margin_text_card"
+        android:layout_marginRight="@dimen/layout_margin_text_card"
+        android:textSize="@dimen/textDescriptionCommunications"/>
+
+    <ImageView
+        android:id="@+id/ic_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/layout_margin_text_card"
+        android:layout_marginRight="@dimen/layout_margin_text_card"
+        app:srcCompat="@drawable/ic_check" />
+
+    <ImageView
+        android:id="@+id/ic_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ic_check"
+        android:layout_marginLeft="@dimen/layout_margin_text_card"
+        android:layout_marginRight="@dimen/layout_margin_text_card"
+        app:srcCompat="@drawable/ic_un_favorite" />
+
+</RelativeLayout>

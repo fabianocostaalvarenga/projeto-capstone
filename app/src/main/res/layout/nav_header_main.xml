@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/banner">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/avatarDimension"
+            android:layout_height="@dimen/avatarDimension"
+            android:layout_marginBottom="@dimen/navHeaderBottomLeft"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/navHeaderMarginRight" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navHeaderHeight"
+            android:layout_gravity="center"
+            android:background="@color/colorNavHeaderBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/navHeaderBottomLeft">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/colorTextNavHeader"
+                android:textSize="@dimen/textDescriptionCommunications" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorTextNavHeader"
+                android:textSize="@dimen/textDescriptionCommunications" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

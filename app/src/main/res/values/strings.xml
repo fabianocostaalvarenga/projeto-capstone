@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Educandário Querubim</string>
+
+    <string name="title_bar">Agenda Escolar</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="processing">Processando...</string>
+
+    <!-- Content menu bar -->
+    <string name="action_filter_all">Todas</string>
+    <string name="action_filter_by_favorite">Favoritas</string>
+    <string name="action_filter_by_read">Lidas</string>
+
+    <!-- Splash Screen Texts -->
+    <string name="content_main_slogan_address">Rua Ivo Borges, 348 - Recreio dos Bandeirantes - RJ</string>
+    <string name="content_main_slogan_tel">(21) 3627-6339</string>
+
+    <!-- Drawer Menu Itens  -->
+    <string name="drawer_item_login">Login</string>
+    <string name="drawer_item_logout">Logout</string>
+    <string name="drawer_item_communication">Comunicações</string>
+    <string name="drawer_item_calendar">Calendário</string>
+    <string name="drawer_item_general_information">Orientações Gerais</string>
+    <string name="drawer_item_time">Horários</string>
+    <string name="drawer_item_personal_data">Dados Pessoais</string>
+    <string name="drawer_item_about">Sobre</string>
+
+    <!-- Actions options menu bar -->
+    <string name="action_share_title">Compartilhar via</string>
+    <string name="title_activity_schedule">Comunicações</string>
+    <string name="action_share_schedule">Compartilhar</string>
+    <string name="action_share_favorite">Favoritar</string>
+
+    <!-- Float Action Button Labels -->
+    <string name="fb_menu_actions">Opções</string>
+    <string name="fb_open_page">Abrir site</string>
+    <string name="fb_attach_file">Ver anexo</string>
+    <string name="fb_respond">Responder</string>
+    <string name="fb_check">Assinar</string>
+
+    <!-- Actions Message -->
+    <string name="checked_success">Assinatura alterada com sucesso!</string>
+    <string name="favorite_success">Mensagem favorita alterada com sucesso!</string>
+
+    <!-- Login Messages -->
+    <string name="welcome_login">Seja bem vindo</string>
+    <string name="bad_login">Login falhou. Tente novamente...</string>
+    <string name="sign_out">Você foi deslogado com sucesso...</string>
+    <string name="revoke_google_account">Dados do login do usuario revogados do App com sucesso!!!</string>
+    <string name="loading_communication">Buscando dados do servidor. Aguarde...</string>
+
+    <!-- Main -->
+    <string name="filter_all_message">Filtrando todos os comunicados...</string>
+    <string name="filter_favorite_message">Filtrando comunicados favoritos...</string>
+    <string name="filter_read_message">Filtrando comunicados lidos...</string>
+    <string name="unknown_user_message">Usuário desconhecido</string>
+    <string name="unknown_user_message_instruct">Faça seu login...</string>
+
+    <string name="network_fail">Sem conexão com internet. Tente mais tarde!</string>
+    <string name="processing_communication">Processando. Aguarde...</string>
+    <string name="user_logged_out">Usuário deslogado. Faça seu login.</string>
+
+    <!-- AttachmentService Messages -->
+    <string name="processing_download">Download em andamento. Aguarde...</string>
+
+    <!-- SheduleActivity Messages -->
+    <string name="file_id_google_for_download_invalid">Não existem arquivos anexos</string>
+    <string name="url_for_view_invalid">Não existem links referenciados</string>
+
+    <!-- StudantDataActivity Messages -->
+    <string name="studant_title">Dados do Aluno</string>
+
+    <!-- Personal Data -->
+    <string name="email_label">E-Mail</string>
+    <string name="responsible_label">Responsável</string>
+    <string name="phone_label">Celular</string>
+    <string name="co_responsible_label">Co-Responsável</string>
+
+    <string name="register_label">Matrícula</string>
+    <string name="name_label">Nome</string>
+    <string name="birth_Date_label">Nascimento</string>
+    <string name="street_label">Rua</string>
+    <string name="number_label">Número</string>
+    <string name="neighborhood_label">Bairro</string>
+    <string name="city_label">Cidade</string>
+    <string name="uf_label">UF</string>
+    <string name="postal_code_label">CEP</string>
+    <string name="allergies_label">Alergias</string>
+    <string name="blood_type_label">Tipo sanguíneo</string>
+    <string name="fever_medication_label">Medicação para febre</string>
+    <string name="dosage_label">Dosagem</string>
+
+    <string name="txt_message_info_l0">Fabiano Costa de Alvarenga</string>
+    <string name="txt_message_info_l3">Analista de Sistemas</string>
+
+    <string name="txt_message_info_contact1">Contatos:</string>
+    <string name="txt_message_info_contact2">fabiano.costa.alvarenga@gmail.com</string>
+    <string name="txt_message_info_contact3">(21) 98612-6917</string>
+
+    <string name="txt_message_info_version1">Versão 1.0.0 [19/05/2018]</string>
+    <string name="txt_message_info_copyright">Todos os Direitos Reservados</string>
+
+    <string name="login_event">login_event</string>
+</resources>

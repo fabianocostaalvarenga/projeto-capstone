@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_cloud_platform_api">https://agenda-escolar-2018-870f6.appspot.com/</string>
+
+    <string name="google_driver_download_file">https://docs.google.com/uc?export=download&#38;id=</string>
+</resources>
