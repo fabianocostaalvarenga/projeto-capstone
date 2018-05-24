@@ -5,5 +5,5 @@ package com.fca.agenda.integration;
  */
 
 public interface RequestTokenCallback {
-    public void onSuccess(String token);
+    void onSuccess(String token);
 }

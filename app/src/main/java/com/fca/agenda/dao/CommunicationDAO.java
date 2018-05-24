@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.fca.agenda.R;
 import com.fca.agenda.dto.CommunicationDTO;
 
 /**
@@ -19,8 +20,10 @@ public class CommunicationDAO {
 
     private CommunicationDBHelper dbHelper;
     private SQLiteDatabase database;
+    private Context context;
 
     public CommunicationDAO(@NonNull Context ctx) {
+        this.context = ctx;
         this.dbHelper = new CommunicationDBHelper(ctx);
     }
 
@@ -33,7 +36,7 @@ public class CommunicationDAO {
         values.put(AgendaContract.CommunicationEntry.COLUMN_FAVORITE, communicationDTO.getFavorite());
 
         long newRowId = database.insert(AgendaContract.CommunicationEntry.TABLE_NAME, null, values);
-        Log.i(TAG, "New record with id " + newRowId + " inserted successful!");
+        Log.i(TAG, context.getString(R.string.insert_record_success));
 
         database.close();
     }
@@ -50,7 +53,7 @@ public class CommunicationDAO {
         String[] selectionArgs = { String.valueOf(communicationDTO.getId()) };
 
         long rows = database.update(AgendaContract.CommunicationEntry.TABLE_NAME, values, selection, selectionArgs);
-        Log.i(TAG, rows + " row(s) updated successful!");
+        Log.i(TAG, rows + context.getString(R.string.update_success));
 
         database.close();
     }
@@ -102,7 +105,7 @@ public class CommunicationDAO {
         String selection = AgendaContract.CommunicationEntry.COLUMN_COMMUNICATION_ID + " = ?";
         String[] selectionArgs = {String.valueOf(id)};
         int rows = database.delete(AgendaContract.CommunicationEntry.TABLE_NAME, selection, selectionArgs);
-        Log.i(TAG, rows + " row(s) deleted successful!");
+        Log.i(TAG, rows + context.getString(R.string.deleted_success));
 
         database.close();
     }

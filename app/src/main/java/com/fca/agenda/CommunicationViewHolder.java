@@ -27,7 +27,7 @@ public class CommunicationViewHolder extends RecyclerView.ViewHolder {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onClick(v, getPosition());
+                listener.onClick(v, getLayoutPosition());
             }
         });
     }

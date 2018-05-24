@@ -32,9 +32,7 @@ public class CommunicationAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(this.ctx).inflate(R.layout.communication_itens, parent, false);
 
-        CommunicationViewHolder communicationViewHolder = new CommunicationViewHolder(view, listener);
-
-        return communicationViewHolder;
+        return new CommunicationViewHolder(view, listener);
     }
 
     @Override

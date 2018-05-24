@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Parcelable;
+import android.os.StrictMode;
 import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -32,6 +32,7 @@ import com.fca.agenda.dto.MainResponseDTO;
 import com.fca.agenda.service.AttachmentService;
 import com.fca.agenda.service.CommunicationService;
 import com.fca.agenda.utils.ApplicationConstants;
+import com.fca.agenda.utils.NetWorkUtils;
 import com.fca.agenda.utils.PermissionCheck;
 import com.fca.agenda.widget.CommunicationWidgetProvider;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivityHelper
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder(); StrictMode.setVmPolicy(builder.build());
 
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
@@ -109,7 +112,9 @@ public class MainActivity extends AppCompatActivityHelper
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         this.mainResponseDTO = savedInstanceState.getParcelable(ApplicationConstants.MAIN_RESPONSE);
-        updateRecycleView(mainResponseDTO.getListCommunication());
+        if(null != this.mainResponseDTO) {
+            updateRecycleView(mainResponseDTO.getListCommunication());
+        }
     }
 
     private void requestListCommunicationByLoggedUser() {
@@ -197,7 +202,11 @@ public class MainActivity extends AppCompatActivityHelper
                         }
                     });
                 } else {
-                    googleSignIn.signIn();
+                    if(NetWorkUtils.isOnline(getApplicationContext())) {
+                        googleSignIn.signIn();
+                    } else {
+                        Snackbar.make(findViewById(R.id.content_main), getString(R.string.network_fail), Snackbar.LENGTH_SHORT).show();
+                    }
                 }
                 headerUpdateUI(googleSignIn.getLastSignedAccountInformation());
                 break;
@@ -227,6 +236,11 @@ public class MainActivity extends AppCompatActivityHelper
     }
 
     private void downloadFile(MainResponseDTO mainResponseDTO, String typeDoc) {
+
+        if(!NetWorkUtils.isOnline(getApplicationContext())) {
+            Snackbar.make(findViewById(R.id.content_main), getString(R.string.network_fail), Snackbar.LENGTH_SHORT).show();
+            return;
+        }
 
         if(null == googleSignIn.getLastSignedAccountInformation()) {
             Snackbar.make(findViewById(R.id.content_main), getString(R.string.user_logged_out), Snackbar.LENGTH_LONG).show();
@@ -307,6 +321,12 @@ public class MainActivity extends AppCompatActivityHelper
     }
 
     private void launchIntentPersonalDataActivity() {
+
+        if(!NetWorkUtils.isOnline(getApplicationContext())) {
+            Snackbar.make(findViewById(R.id.content_main), getString(R.string.network_fail), Snackbar.LENGTH_SHORT).show();
+            return;
+        }
+
         if(null != googleSignIn.getLastSignedAccountInformation()) {
             Intent launchIntentPersonalDataActivity = new Intent(this, PersonalDataActivity.class);
             startActivity(launchIntentPersonalDataActivity);

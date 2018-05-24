@@ -6,11 +6,8 @@ import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 
 import com.fca.agenda.R;
-import com.fca.agenda.dto.CommunicationDTO;
 import com.fca.agenda.dto.MainResponseDTO;
 import com.fca.agenda.dto.UserDTO;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;

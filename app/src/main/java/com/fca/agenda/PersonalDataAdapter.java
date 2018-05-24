@@ -6,12 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.fca.agenda.dto.CommunicationDTO;
 import com.fca.agenda.dto.StudantDTO;
-import com.fca.agenda.dto.UserDTO;
-import com.fca.agenda.utils.DateUtils;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -34,9 +30,7 @@ public class PersonalDataAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(this.ctx).inflate(R.layout.personal_data_itens, parent, false);
 
-        PersonalDataViewHolder personalDataViewHolder = new PersonalDataViewHolder(view, listener);
-
-        return personalDataViewHolder;
+        return new PersonalDataViewHolder(view, listener);
     }
 
     @Override

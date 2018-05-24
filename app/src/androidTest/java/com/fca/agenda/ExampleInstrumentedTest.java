@@ -43,7 +43,7 @@ public class ExampleInstrumentedTest {
         List<CommunicationDTO> communicationDTOS = null;
 
         if (null != cursor && cursor.moveToFirst()) {
-            communicationDTOS = new ArrayList<CommunicationDTO>();
+            communicationDTOS = new ArrayList<>();
             CommunicationDTO dto;
             do {
                 dto = new CommunicationDTO();

@@ -25,7 +25,7 @@
                 android:id="@+id/studantName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:maxLines="3"
                 android:padding="@dimen/ic_favorite_padding"
@@ -33,7 +33,7 @@
                 android:textSize="@dimen/textTitleCommunications"
                 android:layout_marginLeft="@dimen/layout_margin_text_card"
                 android:layout_marginRight="@dimen/layout_margin_text_card"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/studantRegistration"

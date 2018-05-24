@@ -48,22 +48,6 @@ public class AttachmentService {
     }
 
     /**
-     * Method responsible for displaying a PDF document directly from a URL within a webview.
-     *
-     * @param activity
-     * @param sharedLink
-     */
-    public static void pdfView(@NonNull AppCompatActivity activity, final String sharedLink) {
-        WebView webView = new WebView(activity);
-        webView.getSettings().setJavaScriptEnabled(true);
-
-        webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl(sharedLink);
-
-        activity.setContentView(webView);
-    }
-
-    /**
      * Method responsible for downloading a google driver file through your ID.
      *
      * @param activity
@@ -111,7 +95,7 @@ public class AttachmentService {
 
         @Override
         protected Map<String, String> doInBackground(String... parameters) {
-            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(parameters[0].toString()));
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(parameters[0]));
 
             request.setMimeType(parameters[3]);
             String cookies = CookieManager.getInstance().getCookie(parameters[0]);

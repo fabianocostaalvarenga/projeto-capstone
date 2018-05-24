@@ -13,7 +13,8 @@
             android:id="@+id/img_owner"
             android:layout_width="@dimen/avatar_dimens"
             android:layout_height="@dimen/avatar_dimens"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
+            android:contentDescription="@string/author_image"
             android:src="@mipmap/ic_owner"/>
 
         <TextView
@@ -21,21 +22,21 @@
             android:layout_marginTop="@dimen/margin_top"
             android:textSize="@dimen/textTitleCommunications"
             android:textStyle="bold"
-            android:layout_marginLeft="@dimen/margin_top"
-            android:layout_marginRight="@dimen/margin_top"
+            android:layout_marginStart="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/img_owner"
+            android:layout_toEndOf="@+id/img_owner"
             android:id="@+id/textView0" />
 
         <TextView
             android:text="@string/txt_message_info_l3"
             android:textSize="10dp"
-            android:layout_marginLeft="@dimen/margin_top"
+            android:layout_marginStart="@dimen/margin_top"
             android:layout_marginTop="@dimen/margin_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/img_owner"
+            android:layout_toEndOf="@+id/img_owner"
             android:layout_below="@+id/textView0"
             android:id="@+id/textView3" />
 
@@ -43,7 +44,7 @@
             android:text="@string/txt_message_info_contact1"
             android:textSize="16dp"
             android:textStyle="bold"
-            android:layout_marginLeft="@dimen/margin_top"
+            android:layout_marginStart="@dimen/margin_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_owner"
@@ -52,7 +53,7 @@
         <TextView
             android:text="@string/txt_message_info_contact2"
             android:textSize="10dp"
-            android:layout_marginLeft="@dimen/margin_top"
+            android:layout_marginStart="@dimen/margin_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView5"
@@ -61,7 +62,7 @@
         <TextView
             android:text="@string/txt_message_info_contact3"
             android:textSize="10dp"
-            android:layout_marginLeft="@dimen/margin_top"
+            android:layout_marginStart="@dimen/margin_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView6"
@@ -70,10 +71,10 @@
         <TextView
             android:text="@string/txt_message_info_version1"
             android:textSize="10dp"
-            android:layout_marginRight="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_top"
             android:layout_marginTop="@dimen/margin_top"
             android:textStyle="bold"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView7"
@@ -82,8 +83,8 @@
         <View
             android:id="@+id/view"
             android:layout_width="wrap_content"
-            android:layout_marginLeft="@dimen/margin_top"
-            android:layout_marginRight="@dimen/margin_top"
+            android:layout_marginStart="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_top"
             android:layout_marginTop="@dimen/margin_top"
             android:layout_height="2dip"
             android:layout_below="@+id/textView8"
@@ -92,10 +93,10 @@
         <TextView
             android:text="@string/txt_message_info_copyright"
             android:textSize="10dp"
-            android:layout_marginRight="@dimen/margin_top"
+            android:layout_marginEnd="@dimen/margin_top"
             android:layout_marginTop="@dimen/margin_top"
             android:textStyle="italic"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/view"

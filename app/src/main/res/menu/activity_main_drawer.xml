@@ -25,7 +25,7 @@
             android:title="@string/drawer_item_time" />
     </group>
 
-    <item android:title="Úteis">
+    <item android:title="@string/drawer_agregate_utils">
         <menu>
             <item
                 android:id="@+id/nav_personal_Data"

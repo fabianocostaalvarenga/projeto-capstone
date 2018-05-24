@@ -3,11 +3,8 @@ package com.fca.agenda.dto;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.fca.agenda.utils.ApplicationConstants;
 import com.fca.agenda.utils.DateUtils;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 
 /**

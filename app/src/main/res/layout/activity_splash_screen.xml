@@ -16,7 +16,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_phone" />
+            android:src="@drawable/ic_phone"
+            android:contentDescription="@string/icon_phone"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,7 +36,8 @@
         android:paddingLeft="@dimen/activity_splash_margin"
         android:paddingRight="@dimen/activity_splash_margin"
         android:paddingTop="@dimen/activity_splash_margin"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo"
+        android:contentDescription="@string/logo_school"/>
 
     <LinearLayout
         android:layout_width="match_parent"

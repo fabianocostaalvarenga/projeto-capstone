@@ -4,12 +4,10 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.fca.agenda.dto.CommunicationDTO;
 import com.fca.agenda.dto.UserDTO;
 import com.fca.agenda.integration.GoogleCloudPlataformClient;
 
 import java.io.IOException;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;

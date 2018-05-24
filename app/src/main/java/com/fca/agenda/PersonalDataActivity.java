@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.fca.agenda.dto.StudantDTO;
 import com.fca.agenda.dto.UserDTO;
@@ -40,6 +42,8 @@ public class PersonalDataActivity extends AppCompatActivityHelper {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_personal_data);
         setSupportActionBar(toolbar);
 
+        showStateView(null);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         startGoogleSigIn();
@@ -47,6 +51,7 @@ public class PersonalDataActivity extends AppCompatActivityHelper {
         requestUserDTOByLoggedUser();
 
         bind(findViewById(R.id.personal_data));
+
     }
 
     private void requestUserDTOByLoggedUser() {
@@ -56,6 +61,8 @@ public class PersonalDataActivity extends AppCompatActivityHelper {
                     public void onResponse(Call call, Response response) {
 
                         UserDTO userDTO = (UserDTO) response.body();
+
+                        showStateView(userDTO);
 
                         email = (EditText) findViewById(R.id.email);
                         email.setText(userDTO.getEmail());
@@ -77,6 +84,24 @@ public class PersonalDataActivity extends AppCompatActivityHelper {
                         prepareRecycleView(userDTO.getStudantDTOs());
                     }
                 });
+    }
+
+    private void showStateView(UserDTO userDTO) {
+        if(null != userDTO && null != userDTO.getEmail() && null != userDTO.getResponsableName()) {
+
+            LinearLayout linearLayout = (LinearLayout) findViewById(R.id.personal_data);
+            linearLayout.setVisibility(View.VISIBLE);
+            TextView textView = (TextView) findViewById(R.id.no_data_found);
+            textView.setVisibility(View.GONE);
+
+        } else {
+
+            TextView textView = (TextView) findViewById(R.id.no_data_found);
+            textView.setVisibility(View.VISIBLE);
+            LinearLayout linearLayout = (LinearLayout) findViewById(R.id.personal_data);
+            linearLayout.setVisibility(View.GONE);
+
+        }
     }
 
     private void prepareRecycleView(final List<StudantDTO> studantDTOS) {

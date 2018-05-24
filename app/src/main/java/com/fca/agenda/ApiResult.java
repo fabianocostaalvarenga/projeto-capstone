@@ -9,6 +9,6 @@ import retrofit2.Response;
 
 public interface ApiResult {
 
-    public void onResponse(Call call, Response response);
+    void onResponse(Call call, Response response);
 
 }

@@ -2,7 +2,6 @@ package com.fca.agenda;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -22,7 +21,7 @@ public class PersonalDataViewHolder extends RecyclerView.ViewHolder {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onClick(v, getPosition());
+                listener.onClick(v, getLayoutPosition());
             }
         });
     }

@@ -25,6 +25,7 @@
     <string name="drawer_item_time">Horários</string>
     <string name="drawer_item_personal_data">Dados Pessoais</string>
     <string name="drawer_item_about">Sobre</string>
+    <string name="drawer_agregate_utils">Úteis</string>
 
     <!-- Actions options menu bar -->
     <string name="action_share_title">Compartilhar via</string>
@@ -91,6 +92,8 @@
     <string name="fever_medication_label">Medicação para febre</string>
     <string name="dosage_label">Dosagem</string>
 
+    <string name="no_data_found">Não foram encontrados dados para o usuário logado.</string>
+
     <string name="txt_message_info_l0">Fabiano Costa de Alvarenga</string>
     <string name="txt_message_info_l3">Analista de Sistemas</string>
 
@@ -102,4 +105,17 @@
     <string name="txt_message_info_copyright">Todos os Direitos Reservados</string>
 
     <string name="login_event">login_event</string>
+
+    <string name="author_image">Imagem do autor da App</string>
+    <string name="icon_phone">Ícone telefone</string>
+    <string name="logo_school">Logo da escola</string>
+    <string name="icon_favorite">Ícone favorito</string>
+    <string name="icon_read">Ícone lido</string>
+    <string name="icon_avatar">Avatar do usuário logado</string>
+    <string name="icon_logo">Logo do principal do App (abertura)</string>
+
+    <string name="insert_record_success">New record inserted successful!</string>
+    <string name="update_success">row(s) updated successful!</string>
+    <string name="deleted_success">row(s) deleted successful!</string>
+
 </resources>
